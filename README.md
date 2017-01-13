@@ -14,9 +14,9 @@ TODO
 5. CSS styling - Create an AMP CSS file. Place in portal root?? Read file and import into doc
 
 6. Module Settings
-- URL override
-- Module chooser
-- Other AMP features per module maybe (https://ampbyexample.com/#components)
+ - URL override
+ - Module chooser
+ - Other AMP features per module maybe (https://ampbyexample.com/#components)
    - Accordion
    - light box
    - iframe
