@@ -15,11 +15,13 @@
 /*
 
 !.gitignore
-!Robots.txt
 !App_Code/
 !SQL/
 bin/
-
+!bin/HtmlAgilityPack.dll
+!bin/HtmlAgilityPack.dll.refresh
+!bin/HtmlAgilityPack.pdb
+!bin/HtmlAgilityPack.xml
 !SiteAnalytics.config
 
 !DesktopModules/
