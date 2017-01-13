@@ -14,22 +14,22 @@ TODO
 5. CSS styling - Create an AMP CSS file. Place in portal root?? Read file and import into doc
 
 6. Module Settings
---URL override
---Module chooser
---Other AMP features per module maybe (https://ampbyexample.com/#components)
-> Accordion
-> light box
-> iframe
-> analytics
+- URL override
+- Module chooser
+- Other AMP features per module maybe (https://ampbyexample.com/#components)
+   - Accordion
+   - light box
+   - iframe
+   - analytics
 
 7. Portal Settings
-> CSS
-> templating
-> amp font
-> menu creator
+ - CSS
+ - templating
+ - amp font
+ - menu creator
 
 8. Build settings into DNN 9 toolbar
 
 
 9. CSS ignore 
-> if a module has a class or container with "skip-amp" then it should be ignored.
+ - if a module has a class or container with "skip-amp" then it should be ignored.
