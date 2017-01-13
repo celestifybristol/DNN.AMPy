@@ -17,7 +17,8 @@
 !.gitignore
 !App_Code/
 !SQL/
-bin/
+!bin/
+bin/*
 !bin/HtmlAgilityPack.dll
 !bin/HtmlAgilityPack.dll.refresh
 !bin/HtmlAgilityPack.pdb
