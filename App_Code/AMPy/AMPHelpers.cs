@@ -11,6 +11,7 @@ using System.IO;
 using System.Text;
 using System.Net;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 /// <summary>
 /// Summary description for AMPHelpers
@@ -196,11 +197,37 @@ namespace Risdall.AMPy
             foreach (var imgTag in imageList)
             {
                 var original = imgTag.OuterHtml;
+                
                 var replacement = imgTag.Clone();
+                string width = "";
+                if (imgTag.Attributes.Contains("style") && imgTag.Attributes["style"].Value.Contains("width:"))
+                {
+                    string Pattern = @"(?<=width: )[0-9A-Za-z]+(?=;)";
+                    width = Regex.Match(replacement.OuterHtml, Pattern).Value;
+                    width = width.Replace("px", "");
+                }
+
+                width = string.IsNullOrEmpty(width) ? "400" : width;
+
+                string height = "";
+
+                if (imgTag.Attributes.Contains("style") && imgTag.Attributes["style"].Value.Contains("height:"))
+                {
+                    string Pattern = @"(?<=height: )[0-9A-Za-z]+(?=;)";
+                    height = Regex.Match(replacement.OuterHtml, Pattern).Value;
+                    height = width.Replace("px", "");
+                }
+
+                height = string.IsNullOrEmpty(height) ? "300" : height;
+
                 replacement.Name = ampImage;
-                replacement.Attributes.Add("width", "300px");
-                replacement.Attributes.Add("height", "200px");
+                replacement.Attributes.Add("width", width);
+                replacement.Attributes.Add("height", height);
+                replacement.Attributes.Add("layout", "responsive");
                 replacement.Attributes.Remove("caption");
+                replacement.Attributes.Remove("style");
+                replacement.Attributes.Remove("title");
+                //replacement.Attributes.Add("test", Result);
                 markup = markup.Replace(original, replacement.OuterHtml);
             }
 

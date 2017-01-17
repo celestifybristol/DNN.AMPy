@@ -110,7 +110,7 @@ namespace Risdall.AMPy
                 sbNewAMPPage.Append(File.ReadAllText(Server.MapPath("~/DesktopModules/Risdall/AMPy/templates/start.html")));
                 //token replace for template
                 sbNewAMPPage.Replace("[ItemUrl]", url);
-
+                sbNewAMPPage.Replace("[LOGO]", this.PortalSettings.HomeDirectory + this.PortalSettings.LogoFile);
 
                 sbNewAMPPage.Append(parsedHTML);
                 sbNewAMPPage.Append("</body></html>");
