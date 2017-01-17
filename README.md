@@ -9,8 +9,8 @@ TODO
 =============
 1. Finish removing wrapping divs for content. div class="DnnModule" class="DNNContainer_noTitle"
 2. Remove empty div class="clear", remove module links a name="880"
-3. Auto size & height images based on style tags
-4. Add AMP nav, logo
+3. Auto size & height images based on style tags //DONE
+4. Add AMP nav, logo //DONE
 5. CSS styling - Create an AMP CSS file. Place in portal root?? Read file and import into doc
 
 6. Module Settings
